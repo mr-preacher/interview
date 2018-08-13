@@ -35,8 +35,8 @@ def is_tree_equal_iterative(node1, node2):
     queue2 = [node2]
 
     while len(queue1) > 0 and len(queue2) > 0:
-        node1 = queue1.pop(0)
-        node2 = queue2.pop(0)
+        node1 = queue1.pop(-1)
+        node2 = queue2.pop(-1)
 
         if node1.data != node2.data:
             return False
